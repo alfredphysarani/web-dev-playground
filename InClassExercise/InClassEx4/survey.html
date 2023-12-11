@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>CIS 222 InClass Exercise 4 - Survey</title>
+        <link rel="stylesheet" href="CIS222InClassEx4.css">
+    </head>
+    <body>
+        <div id="header-container">
+            <span id="site-menu">
+                <a href="index.html" target="_self">home</a> | 
+                <a href="intro.html" target="_self">introduction</a> | 
+                <a href="survey.html" target="_self">survey</a>
+            </span>
+        </div>
+        <div id="content-container">
+            <form action="#" method="post">
+                <table style="border: collapse; width: 80%; height: 50%; align-self: center;" border="1">
+                    <tbody>
+                        <tr style="height: 18px;">
+                            <td style="width: 100%; height: 18px; text-align: center;" colspan="2">
+                                Survey
+                            </td>
+                        </tr>
+                        <tr style="height: 18px;">
+                            <td style="width: 20%; height: 18px; text-align: right;">
+                                Name:
+                            </td>
+                            <td style="width: 80%; height: 18px;">
+                                <input type="text" name="name" size="50" maxlength="10">
+                                <br>
+                                <textarea rows="5" cols="50" name="description">Enter description here...</textarea>
+                            </td>
+                        </tr>
+                        <tr style="height: 18px;">
+                            <td style="width: 20%; height: 18px; text-align: right;">
+                                Birthday:
+                            </td>
+                            <td style="width: 80%; height: 18px;">
+                                <input type="date" name="birthday" min="1900-01-01" max="2005-12-31"/>
+                            </td>
+                        </tr>
+                        <tr style="height: 18px;">
+                            <td style="width: 20%; height: 18px; text-align: right;">
+                                Interest:
+                            </td>
+                            <td style="width: 80%; height: 18px;">
+                                <input type="checkbox" name="AI" value="on" checked> AI
+                                <br>
+                                <input type="checkbox" name="Web Frontend" value="on"> Web Frontend
+                                <br>
+                                <input type="checkbox" name="Backend" value="on"> Backend
+                                <br>
+                                <input type="checkbox" name="Mobile App" value="on"> Mobile App
+                            </td>
+                        </tr>
+                        <tr style="height: 18px;">
+                            <td style="width: 20%; height: 18px; text-align: right;">
+                                Gender:
+                            </td>
+                            <td style="width: 80%; height: 18px;">
+                                <input type="radio" name="gender" value="M"> Male
+                                <input type="radio" name="gender" value="F"> Female
+                            </td>
+                        </tr>
+                        <tr style="height: 18px;">
+                            <td style="width: 20%; height: 18px; text-align: right;">
+                                Title:
+                            </td>
+                            <td style="width: 80%; height: 18px;">
+                                <select name="dropdown">
+                                    <option value="Mr" selected>Mr</option>
+                                    <option value="Mrs">Mr</option>
+                                    <option value="Ms">Ms</option>
+                                    <option value="Dr">Dr</option>
+                                    <option value="Prof">Prof</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="file" name="fileupload" accept="image/*" />
+                <input type="submit" name="submit" value="Submit"/>
+                <input type="reset" name="reset" value="Reset"/> 
+                <input type="button" name="OK" value="OK"/> 
+                <input type="image" name="imagebutton" src="redBtn.jpg" /> 
+            </form>
+        </div>
+    </body>
+</html>

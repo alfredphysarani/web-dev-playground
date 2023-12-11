@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+	<h1 style="color: green;">
+		GeeksforGeeks
+	</h1>
+
+	<input type="checkbox" name="laptop"
+		value="HP">HP laptop<br>
+	
+	<input type="checkbox" name="laptop"
+		value="DELL">DELL laptop<br>
+
+	<input type="checkbox" name="laptop"
+		value="MAC">MAC laptop<br>
+
+	<input type="checkbox" name="laptop"
+		value="ASUS">ASUS laptop<br>
+
+	<button onclick="getValue()">
+		Get Value
+	</button>
+	
+	<script>
+		function getValue() {
+			var checkboxes =
+				document.getElementsByName('laptop');
+
+			var result = "";
+
+			for (var i = 0; i < checkboxes.length; i++) {
+				if (checkboxes[i].checked) {
+					result += checkboxes[i].value
+						+ " " + " Laptop, ";
+				}
+			}
+			document.write("<p> You have selected : "
+					+ result + "</p>");
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+img {
+    height: 10rem;
+}
+#section1 {
+    height: 10rem;
+}
+#section2 {
+    background-color: blanchedalmond;
+    width: 25%;
+    height: 20rem;
+}
+#section3 {
+    background-color: greenyellow;
+    width: 75%;
+    height: 15rem;
+}
+#section4 {
+    width: 75%;
+    background-color: yellow;
+    height: 5rem;
+}
+p#selfIntro {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1%;
+}
+
+strong {
+    color: purple;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,32 @@
+body {
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: black;
+}
+
+.font-properties {
+    font-family: cursive, sans-serif;
+    font-size: 2.4rem;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.color-properties {
+    color: white;
+    background-color: #2ecc71;
+}
+
+.text-properties {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.box-shadow {
+    padding: 10px;
+    border: 4px;
+    box-shadow: 4px 2px 20px 23px yellow;
+}

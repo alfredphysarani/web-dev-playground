@@ -1,0 +1,70 @@
+<script>  
+
+function validateemail()  
+{  
+var email = document.myform.email.value;
+var pwd   = document.myform.pwd.value;
+var tarea = document.myform.tarea.value;
+
+var ele = document.getElementsByName('gender');
+var elevalue="";
+			for(i = 0; i < ele.length; i++) {
+				if(ele[i].checked)
+				elevalue = ele[i].value;
+			}
+
+var checkboxes = document.getElementsByName('laptop');
+var result = "";
+			for (var i = 0; i < checkboxes.length; i++) {
+				if (checkboxes[i].checked) {
+					result += checkboxes[i].value
+						+ " " + " Laptop, ";
+				}
+			}
+			
+selectElement = document.querySelector('#select1');
+output = selectElement.options[selectElement.selectedIndex].value;
+
+
+sessionStorage.setItem("email", email);
+sessionStorage.setItem("pwd", pwd);
+sessionStorage.setItem("tarea", tarea);
+sessionStorage.setItem("elevalue", elevalue);
+sessionStorage.setItem("result", result);
+sessionStorage.setItem("output", output);
+
+var atposition=email.indexOf("@");  
+var dotposition=email.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  document.write("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+
+
+}  
+</script>  
+<body>  
+
+<form name="myform"  method="post" action="getemailval.html" onsubmit="return validateemail();">  
+Email: <input type="text" name="email"><br/>  
+password: <input type="password" name="pwd"><br/>
+comment:  <textarea name="tarea" rows="4" cols="10"></textarea><br/>
+<br>
+gender:
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female
+<input type="radio" name="gender" value="Others">Others
+<br><br>
+<input type="checkbox" name="laptop" value="HP">HP laptop<br>
+<input type="checkbox" name="laptop" value="DELL">DELL laptop<br>
+<input type="checkbox" name="laptop" value="MAC">MAC laptop<br>
+<input type="checkbox" name="laptop" value="ASUS">ASUS laptop<br>		
+<p> Select one from the given options:
+		<select id="select1">
+			<option value="free">Free</option>
+			<option value="basic">Basic</option>
+			<option value="premium">Premium</option>
+		</select>
+	</p>
+<input type="submit" value="register">  
+</form> 

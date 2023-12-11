@@ -1,0 +1,33 @@
+<body>
+	<p>
+		Select a radio button and click on Submit.
+	</p>
+	
+	Gender:
+	<input type="radio" name="gender" value="Male">Male
+	<input type="radio" name="gender" value="Female">Female
+	<input type="radio" name="gender" value="Others">Others
+	
+	<br>
+	
+	<button type="button" onclick="displayRadioValue()">
+		Submit
+	</button>
+	
+	<br>
+	
+	<div id="result"></div>
+	
+	<script>
+		function displayRadioValue() {
+			var ele = document.getElementsByName('gender');
+			var elevalue="";
+			for(i = 0; i < ele.length; i++) {
+				if(ele[i].checked)
+				elevalue = ele[i].value;
+			}
+			document.write(elevalue)
+		}
+	</script>
+</body>
+</html>	
