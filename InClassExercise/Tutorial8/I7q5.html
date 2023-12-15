@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorial Q5</title>
+    </head>
+    <body>
+        <h1>HTML DOM Events</h1>
+        <p>The onclick event triggers a function when an element is clicked on.</p>
+        <p>Click to trigger a function that will output "Hello World"</p>
+        <button onclick="myFunction()"> Click me</button>
+        <hr>
+        <p>Background Color Change</p>
+        <button onclick="changeBGColor('pink')">PINK</button>
+        <button onclick="changeBGColor('limegreen')">LIME GREEN</button>
+        <button onclick="changeBGColor('skyblue')">SKY BLUE</button>
+        <hr>
+        <p id="size-title">Change Size</p>
+        <button onclick="changeSize('small')">small</button>
+        <button onclick="changeSize('medium')">medium</button>
+        <button onclick="changeSize('large')">large</button>
+
+        <p id="result"></p>
+    </body>
+    <script>
+        function myFunction() {
+            if (document.getElementById("result").innerHTML != "") {
+                document.getElementById("result").innerHTML = "";
+            } else {
+                document.getElementById("result").innerHTML = "<ul><li><a href='http://www.youtube.com/'>YouTube</a></li><li><a href='http://www.google.com/'>Google</a></li></ul>";
+            }
+        }
+
+        function changeBGColor(color) {
+            document.getElementsByTagName('body')[0].setAttribute("style", "background-color: " + color);
+        }
+
+        function changeSize(size) {
+            document.getElementById('size-title').setAttribute("style", "font-size: " + size );
+        }
+    </script>
+</html>

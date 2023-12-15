@@ -1,0 +1,285 @@
+:root {
+    --scroll: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+/* Top Container Style */
+.top-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    height: 30vh;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
+    opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
+}
+
+.top-container > h1, h2, p {
+    display: block;
+    text-align: center;
+    font-family: 'Silkscreen', sans-serif;
+    color: limegreen;
+}
+
+.top-container > h1 {
+    font-size: 5rem;
+}
+
+.top-container > h2 {
+    font-size: 3rem;
+}
+
+.top-container > p {
+    font-size: 2rem;
+}
+
+
+/* Menu Cointainer Style */
+.menu-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    display: flex;
+    clear: both;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-bottom: 2rem;
+    background-color: rgb(40, 40, 40);
+}
+
+.menu-container > a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+.menu-container > a:hover {
+    background-color: rgb(50, 205, 50, .7);
+    padding: 2px 2px 2px 2px;
+    border-radius: 10px;
+}
+
+/* Content Container Style */
+.content-container {
+    z-index: 100;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.content-container > section {
+    height: 100vh;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.content-container h1 {
+    font-size: 3rem;
+}
+
+/* Slide Show Style */
+.slideshow-container {
+    width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: flex;
+}
+
+.slides-container-left, .slides-container-right {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slides-container-left > img {
+    min-height: 60vh;
+    width: auto;
+    aspect-ratio: initial;
+    border-radius: 30px;
+}
+
+.slides-container-right > p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.slides-container-right li {
+    font-size: 1.5rem;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 30px 30px;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(1, 124, 1, 0.7);
+}
+
+/* Slide Show dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #00af3d;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #62ffab;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+ @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Footer Container */
+.bottom-container {
+    background-color: black;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.bottom-container > a {
+    color: white;
+    text-decoration: none;
+}
+
+/* flip card style */
+.flip-cards-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #f1f1f1;
+    border-radius: 30px;
+    perspective: 1000px;
+}
+
+.flip-card-front img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 30px;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.flip-card-front {
+    background-color: rgb(0, 58, 0);
+    color: black;
+}
+  
+.flip-card-back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back h1 {
+    font-size: 3rem;
+}
+
+.flip-card-back p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Social Media container*/
+.social-media-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw
+}
+
+.social-media-container > a > img {
+    height: 300px;
+}
+
+.social-media-container > a > img:hover {
+    height: 350px;
+}

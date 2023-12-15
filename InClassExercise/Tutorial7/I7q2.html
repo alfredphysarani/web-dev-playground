@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CIS222 Tutorial 7 - Q2</title>
+    </head>
+    <body>
+        <h1> Tutorial 7 Q2</h1>
+
+    </body>
+    <script>
+        var n = prompt("Enter the n value for summation from 1: ");
+        n = parseInt(n, 10);
+
+        // factorial 
+        answer = 1;
+        document.write("<p>")
+        for (var i=1; i < n+1; i++){
+            document.write(i+", ");
+            answer = answer * i;
+        }
+        document.write("</p>")
+
+        document.write("<p> " + n + "! = " + answer + ".</p>")
+    </script>
+</html>

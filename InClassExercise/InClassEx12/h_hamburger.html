@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hamburger</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                background-color: black;
+                color: limegreen;
+            }
+
+            .topnav #myLinks {
+                display: none;
+            }
+
+            .topnav {
+                overflow: hidden;
+                position: relative;
+            }
+
+            .topnav a {
+                font-size: 2rem;
+                color: green;
+                text-decoration: none;
+                float: left;
+                padding: 1rem 1rem;
+            }
+            
+            .topnav a:hover {
+                background-color: gray;
+                color: lime;
+            }
+
+            .topnav a.icon {
+                float: right;
+                font-size: 2rem;
+            }
+
+            #content{
+                clear: both;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="#home" class="active">Logo</a>
+            <div id="myLinks">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="content">
+                <p>hamburger trial</p>
+            </div>
+        </div>
+    </body>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display==="block"){
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,133 @@
+:root {
+    --scroll: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+/* Top Container Style */
+.top-container {
+    padding-top: 5rem;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, var(--background-opacity));
+    position: sticky;
+    top: 0;
+    translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
+    --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
+}
+
+.top-container > h1, h2, p {
+    display: block;
+    text-align: center;
+    font-family: 'Silkscreen', sans-serif;
+    color: limegreen;
+}
+
+.top-container > h1 {
+    font-size: 5rem;
+}
+
+.top-container > h2 {
+    font-size: 3rem;
+}
+
+.top-container > p {
+    font-size: 2rem;
+}
+
+.top-emoji-container {
+    padding-top: 4rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: calc(4rem + 16rem * (min(500, max(0, var(--scrollTop))))/500);
+}
+
+.top-emoji-container > span {
+    font-size: 6rem;
+    opacity: calc(1 - 1 * (min(700, max(225, var(--scrollTop))) - 225)/475);
+}
+
+
+/* Menu Cointainer Style */
+.menu-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    display: flex;
+    clear: both;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-bottom: 2rem;
+    background-color: rgb(40, 40, 40);;
+}
+
+.menu-container > a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+.menu-container > a:hover {
+    background-color: rgb(50, 205, 50, .7);
+    padding: 2px 2px 2px 2px;
+    border-radius: 10px;
+}
+
+/* Content Container Style */
+.content-container > section {
+    height: 100vh;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.content-container h1 {
+    font-size: 3rem;
+}
+
+/* Image Style */
+#sec-img1 {
+    /* formular = maxWidth * range of percentage of the scrolling Top*/
+    width: calc(55vw * (min(900, max(175, var(--scrollTop))) - 175)/725);
+    opacity: calc(1 * (min(900, max(175, var(--scrollTop))) - 175)/725);
+    border-radius: 30px;
+}
+
+#sec-img2 {
+    width: calc(55vw * (min(1900, max(1225, var(--scrollTop))) - 1225)/675);
+    opacity: calc(1 * (min(1900, max(1225, var(--scrollTop))) - 1225)/675);
+    border-radius: 30px;
+}
+
+#sec-img3 {
+    width: calc(55vw * (min(2850, max(2225, var(--scrollTop))) - 2225)/625);
+    opacity: calc(1 * (min(2850, max(2225, var(--scrollTop))) - 2225)/625);
+    border-radius: 30px;
+}
+
+/* Footer Container */
+.bottom-container {
+    background-color: black;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.bottom-container > a {
+    color: white;
+    text-decoration: none;
+}

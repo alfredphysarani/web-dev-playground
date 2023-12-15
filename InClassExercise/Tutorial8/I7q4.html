@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorial Q4</title>
+    </head>
+    <body>
+        <button onclick="checkyear()">click</button>
+    </body>
+    <script>
+        function checkyear() {
+            var year = prompt("Please input the year: ");
+            year = parseInt(year, 10);
+            
+            if (year % 400 === 0 || (year % 4 === 0 && year % 100 != 0)) {
+                document.write("<p>" + year + " is a leap year</p>");
+            } else {
+                document.write("<p>" + year + " is NOT a leap year</p>");
+            }
+        }
+    </script>
+</html>

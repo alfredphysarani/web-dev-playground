@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Get value of selected
+		radio button
+	</title>
+</head>
+<body>
+	<p>
+		Select a radio button and click on Submit.
+	</p>
+	<label>Applicant Name: </label>
+	<input type="text" name="user" value="">
+	<br>
+	<label>Desired Timezone: </label>
+	<input type="radio" name="timezone" value="GBR">United Kingdom
+	<input type="radio" name="timezone" value="SGP">Singapore
+	<input type="radio" name="timezone" value="JPN">Japan
+	
+	<br>
+    <label>Programming Language: </label>
+    <br>
+	<input type="checkbox" name="lang" value="Python">Python<br>
+	<input type="checkbox" name="lang" value="JS">JavaScript<br>
+	<input type="checkbox" name="lang" value="C++">C++<br>
+	<input type="checkbox" name="lang" value="Ruby">Ruby<br>
+
+    <label>Number of years in Programming: </label>
+		<select id="progYear">
+			<option value="1 - 2">1-2</option>
+			<option value="2 - 5">2-5</option>
+			<option value="5+">5+</option>
+		</select>
+	</p>
+
+		
+	<button type="button" onclick="displayRadioValue()">
+		Submit
+	</button>
+	
+	<br>
+	
+	<div id="result"></div>
+	
+	<script>
+		function displayRadioValue() {
+            var nameEles = document.getElementsByName('user');
+            var name = "";
+            if (nameEles[0].value != "") {
+                name = "Applicant Name: " + nameEles[0].value;
+            }
+            
+			var ele = document.getElementsByName('timezone');
+			var timezone =""
+			for(i = 0; i < ele.length; i++) {
+				if(ele[i].checked)
+				timezone = "Desired Timezone: " + ele[i].value;
+			}
+			var checkboxes = document.getElementsByName('lang');
+			var checkboxresult = "";
+			for (var i = 0; i < checkboxes.length; i++) {
+				if (checkboxes[i].checked) {
+					checkboxresult += checkboxes[i].value
+						+ ", ";
+				}
+			}
+			var selectElement = document.querySelector('#progYear');
+			var select_output = "Year of expreience in programming: " + 
+			                    selectElement.options[selectElement.selectedIndex].value + " years";
+			document.getElementById("result").innerHTML
+						= name + "<br>" + timezone + "<br> Programming Langauge Known: " + checkboxresult.substring(0, checkboxresult.length-2) + "<br>" + select_output;
+		}
+	</script>
+	
+</body>
+</html>

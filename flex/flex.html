@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #flex-demo {
+                display: flex;
+                gap: 1rem;
+            }
+            #flex-direction-demo {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>Div Default: Block</p>
+            <span>Span Default: Inline</span>
+        </div>
+        <div id="flex-demo">
+            <span>A flex box will squeeze all the elements into one line</span>
+            <span> span tag </span>
+            <p>p tag </p>
+            <p>p tag 2</p>
+        </div>
+        <div id="flex-direction-demo">
+            <span>Flex Direction demo</span>
+            <span>flex direction can control whether it can stack horizotal </span>
+            <span>or vertical</span>
+        </div>
+    </body>
+</html>

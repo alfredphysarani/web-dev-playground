@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CIS222 Tutorial 7 - Q1</title>
+    </head>
+    <body>
+        <h1> Tutorial 7 Q1</h1>
+        <p id="answer"></p>
+
+    </body>
+    <script>
+        let firstNum = prompt("Please enter the first number.", "");
+        let secondNum = prompt("Please enter the second number." ,"");
+        let thirdNum = prompt("Please enter the third number." ,"");
+        let answer = parseInt(firstNum, 10) + parseInt(secondNum, 10) + parseInt(thirdNum, 10);
+
+        document.getElementById("answer").innerHTML = "The sum of " + firstNum + ", " + secondNum + " and " + thirdNum + " is " + answer +".";
+    </script>
+</html>

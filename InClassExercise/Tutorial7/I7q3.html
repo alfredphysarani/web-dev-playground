@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CIS222 Tutorial 7 - Q3</title>
+    </head>
+    <body>
+        <h1> Tutorial 7 - Q3 </h1>
+        <p id="result"></p>
+
+    </body>
+    <script>
+        var code = prompt("Please enter the promotion code: ");
+
+        if (code === "aaa") {
+            document.getElementById("result").innerHTML = "get $100";
+
+        } else if (code === "bbb") {
+            document.getElementById("result").innerHTML = "get $50";
+        } else {
+            document.getElementById("result").innerHTML = "Invalid Code";
+        }
+        
+    </script>
+</html>
