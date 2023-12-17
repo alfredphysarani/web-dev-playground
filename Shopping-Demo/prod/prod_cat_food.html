@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Products - Amasoon</title>
+        <link rel="stylesheet" href="styles_prod.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="script_prod.js" defer></script>
+    </head>
+    <body>
+        <div id="toaster"></div>
+        <div class="header-container">
+            <div class="logo"><img src="../img/logo.webp"></div>
+            <div class="action-button" id="login">
+                <a href="#login">Login</a>
+                <a href="#register">Register</a>
+            </div>
+        </div>
+        <div class="utility-bar">
+            <div id="return-menu-btn"><a href="../index.html">Return to menu</a></div>
+        </div>
+        <div class="content-container">
+            <div class="product-img-container">
+                <img src="../img/cat-food.png" alt="cat food">
+            </div>
+            <div class="product-desc-container">
+                <div class="prod-title">Cat Food</div>
+                <div>$ <span class="prod-price">40.00</span></div>
+                <div class="prod-brand">Brand: Ciao</div>
+                <div class="prod-origin">Origin: Japan</div>
+                <div class="prod-desc">Best for 0-2 years old cat. Tuna flavour</div>
+                <div class="prod-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-full"></span>
+                </div>
+            </div>
+            <div class="product-action-container">
+                <div class="delivery-option">
+                    <label>Delivery</label>
+                    <br>
+                    <input type="radio" id="normal-del" name="delivery-type" value="normal" checked> Normal: Free
+                    <br>
+                    <input type="radio" id="exopress-del" name="delivery-type" value="express"> Express: $ 10
+                </div>
+                <div>
+                    <label>Quantity: </label>
+                    <input id="qtyInput" type="number" min="0" max="100" step="1" oninput="validity.valid||(value='');">
+                </div>
+                <div>Total Cost: $ 
+                    <span class="total-price">
+                        0
+                    </span>
+                </div>
+                <div>
+                    <button id="buy-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <p>Sitemap</p>
+            <ul>
+                <li>User</li>
+                <ul>
+                    <li>Login</li>
+                    <li>Register</li>
+                </ul>
+                <li>
+                    
+                </li>
+            </ul>
+            
+        </div>
+    </body>
+</html>
