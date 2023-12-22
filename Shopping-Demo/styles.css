@@ -6,6 +6,13 @@
     box-sizing: border-box;
 }
 
+
+@media (max-width: 63.9375em) {
+    .hide-for-mobile {
+        display: none !important;
+    }
+}
+
 html {
     font-size: 100%;
     scroll-behavior: smooth;
@@ -431,6 +438,7 @@ header {
 }
 
 @media(min-width: 64em) {
+
     .prev,
     .next {
         cursor: pointer;
@@ -493,7 +501,7 @@ header {
 
 /* Utility bar */
 .utility-bar {
-    /*position: sticky; */
+    position: sticky;
     top: 150px;
     z-index: 50;
     height: 5vh;
@@ -555,4 +563,17 @@ header {
 .product-container>a>p {
     font-size: 1rem;
     font-weight: bold;
+}
+
+input {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline-color: #ff7d1a;
 }

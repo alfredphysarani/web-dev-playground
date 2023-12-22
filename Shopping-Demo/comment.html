@@ -4,7 +4,7 @@
 <head>
     <title>Amasoon | Contact Us</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script_index.js" defer></script>
+    <script src="script_header.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
@@ -74,30 +74,7 @@
             </nav>
         </div>
     </header>
-    <div class="promotion-banner hide-for-mobile">
-        <div class="slideshow-container">
-            <div class="slides fade">
-                <img src="img/banner1.png">
-            </div>
-            <div class="slides fade">
-                <img src="img/banner2.png">
-            </div>
-            <div class="slides fade">
-                <img src="img/banner3.png">
-            </div>
-            <a class="prev" onclick="rotateSlides(-1)">&#10094;</a>
-            <a class="next" onclick="rotateSlides(1)">&#10095;</a>
-        </div>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </div>
-    <div class="utility-bar">
-        <input type="text" id="filter" placeholder="Filter Text">
-    </div>
-    <nav>
+    <nav class="contact-nav">
 
 		<ul>
 			<li><a href="contactus.html"> General Inquiry Form</a></li>
@@ -144,7 +121,7 @@
 				<textarea rows="5" placeholder="Your Message"></textarea>
 				
 
-				<button type="submit">SEND</button>
+				<button class="contact-btn" type="submit">SEND</button>
 
 
 			</form>

@@ -259,49 +259,85 @@ function addToCart() {
     let productTitle = document.querySelector(".product-details-wrapper .product-title").textContent;
     let productThumb = thumbImagesDivs[0].querySelector("img").getAttribute("src");
     let productPrice = parseFloat(document.querySelector(".product-details-wrapper .current-price").textContent.replace("$", ""));
-    
+    let toastEl = document.getElementById("toaster")
+
     // Check if product already exists in the cart
     let existingProduct = Array.from(cartList.children).find(cartItem => cartItem.querySelector('.item-title').textContent === productTitle);
     
-    if (existingProduct) {
-      // Update quantity and total price of existing product
-      let itemCountElement = existingProduct.querySelector('.item-count');
-      let totalPriceElement = existingProduct.querySelector('.total-price');
-      let currentQuantity = parseInt(itemCountElement.textContent.replace('x ', ''));
-      let newQuantity = currentQuantity + getProductQuantity;
-      let newTotalPrice = "$" + (newQuantity * productPrice).toFixed(2);
-      
-      itemCountElement.textContent = 'x ' + newQuantity;
-      totalPriceElement.textContent = newTotalPrice;
-    } else {
-      // Add new product to the cart
-      let totalPrice = "$" + (getProductQuantity * productPrice).toFixed(2);
-      
-      if (cartList.childElementCount == 0) {
-        checkOutBtn.style.display = "block";
-        cartList.innerHTML = "";
+    if (getProductQuantity != "0"){
+      if (existingProduct) {
+        // Update quantity and total price of existing product
+        let itemCountElement = existingProduct.querySelector('.item-count');
+        let totalPriceElement = existingProduct.querySelector('.total-price');
+        let currentQuantity = parseInt(itemCountElement.textContent.replace('x ', ''));
+        let newQuantity = currentQuantity + getProductQuantity;
+        let newTotalPrice = "$" + (newQuantity * productPrice).toFixed(2);
+        
+        itemCountElement.textContent = 'x ' + newQuantity;
+        totalPriceElement.textContent = newTotalPrice;
+      } else {
+        // Add new product to the cart
+        let totalPrice = "$" + (getProductQuantity * productPrice).toFixed(2);
+        
+        if (cartList.childElementCount == 0) {
+          checkOutBtn.style.display = "block";
+          cartList.innerHTML = "";
+        }
+        
+        cartList.innerHTML += `
+        <div class="cart-item">
+          <div class="item-image">
+            <img src=${productThumb} alt="Product Image" />
+          </div>
+          <div class="item-info">
+            <h4 class="item-title">${productTitle}</h4>
+            <p class="item-price-wrapper">
+              <span class="item-price">$ ${productPrice.toFixed(2)}</span>
+              <span class="item-count">x ${getProductQuantity}</span>
+              <span class="total-price">${totalPrice}</span>
+            </p>
+          </div>
+          <div class="item-delete">
+            <img src="./images/icon-delete.svg" alt="Delete Product" />
+          </div>
+        </div>`;
       }
-      
-      cartList.innerHTML += `
-      <div class="cart-item">
-        <div class="item-image">
-          <img src=${productThumb} alt="Product Image" />
-        </div>
-        <div class="item-info">
-          <h4 class="item-title">${productTitle}</h4>
-          <p class="item-price-wrapper">
-            <span class="item-price">${productPrice}</span>
-            <span class="item-count">x ${getProductQuantity}</span>
-            <span class="total-price">${totalPrice}</span>
-          </p>
-        </div>
-        <div class="item-delete">
-          <img src="./images/icon-delete.svg" alt="Delete Product" />
-        </div>
-      </div>`;
+      // open the cart when adding
+      if (!cart.classList.toggle("open")) {
+        cart.classList.toggle("open");
+      }
+    } else {
+      toastEl.textContent = "Quatity must be greater than zero";
+      toastEl.className = "show";
+      setTimeout(function() {
+        toastEl.textContent="";
+        toastEl.className = toastEl.className.replace("show", "")
+      }, 3000);
     }
   });
 }
+
+checkOutBtn.addEventListener("click", (e) => {
+  let toastEl = document.getElementById("toaster")
+  console.log(cartList.children.length === 0)
+  if (cartList.children.length === 0) {
+    toastEl.textContent = "Cart is Empty";
+    toastEl.className = "show";
+    setTimeout(function() {
+      toastEl.textContent="";
+      toastEl.className = toastEl.className.replace("show", "")
+    }, 3000);
+  } else {
+    let totalPrice = document.getElementsByClassName("total-price")[0];
+    toastEl.textContent = `Checkout Successful! ${totalPrice.textContent} is deducted from your account`;
+    toastEl.className = "show";
+    setTimeout(function() {
+      toastEl.textContent="";
+      toastEl.className = toastEl.className.replace("show", "")
+    }, 3000);
+  }
+})
+
 
 // Event Listener to Delete Cart Product
 cartList.addEventListener("click", (e) => {
@@ -348,3 +384,5 @@ function closeLightBox() {
 lightBoxWrapper.addEventListener("click", (e) => {
   if (e.currentTarget == e.target) closeLightBox();
 });
+
+

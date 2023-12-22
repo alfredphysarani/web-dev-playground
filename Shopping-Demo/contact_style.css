@@ -6,7 +6,6 @@
 
 .container{
 	width: 80%;
-	margin: 50px auto;
 }
 
 .contact-box {
@@ -24,7 +23,7 @@
 .contact-right {
 	flex-basis: 40%;
 	padding: 40px;
-	background: orange;
+	background:  #ff7d1a;
 	color: #fff;
 }
 
@@ -44,7 +43,7 @@ h1{
 
 }
 .input-row .input-group{
-	flex-basis 45%;
+	flex-basis: 45%;
 }
 input{
 	width: 100%;
@@ -64,11 +63,11 @@ textarea{
 label{
 	margin-bottom: 6px;
 	display: block;
-	color: #1c00b5;
+	color: #9b541d;
 }
 
-button{
-	background: orange;
+.contact-btn{
+	background:  #ff7d1a;
 	width: 100px;
 	border: none;
 	outline: none;
@@ -80,7 +79,7 @@ button{
 }
 
 .contact-left h3{
-	color: orange;
+	color:  #ff7d1a;
 	font-weight: 600;
 	margin-bottom: 30px;
 }
@@ -101,31 +100,37 @@ tr td{
 	padding-top: 20px;
 }
 
-nav ul li {
+.contact-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-nav ul li {
 	display: inline-block;
 	list-style: none;
 	margin: 10px 20px;
 }
 
-nav ul li a {
-	color: orange;
+.contact-nav ul li a {
+	color:  #ff7d1a;
 	text-decoration: none;
 	font-size: 18px;
 	position: relative;
 }
 
-nav ul li a::after {
+.contact-nav ul li a::after {
 	content: '';
 	width: 0;
 	height: 3px;
-	background: #ff004f;
+	background:  #ff7d1a;
 	position: absolute;
 	left: 0;
 	bottom: -6px;
 	transition: 0.5s;
 		}
 
-nav ul li a:hover::after {
+.contact-nav ul li a:hover::after {
 	width: 100%;
 }
 

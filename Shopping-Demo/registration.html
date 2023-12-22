@@ -4,7 +4,7 @@
 <head>
     <title>Amasoon | Registration</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script_index.js" defer></script>
+    <script src="script_header.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
@@ -33,7 +33,7 @@
 
                     <div class="mobile-navgation hide-for-desktop">
                         <div class="close-menu">
-                            <img src="./images/icon-close.svg" alt="Close Icon" />
+                            <img src="img/icon-close.svg" alt="Close Icon" />
                         </div>
                         <a href="main.html">Main</a>
                         <a href="about.html">About</a>
@@ -75,37 +75,14 @@
             </nav>
         </div>
     </header>
-    <div class="promotion-banner hide-for-mobile">
-        <div class="slideshow-container">
-            <div class="slides fade">
-                <img src="img/banner1.png">
-            </div>
-            <div class="slides fade">
-                <img src="img/banner2.png">
-            </div>
-            <div class="slides fade">
-                <img src="img/banner3.png">
-            </div>
-            <a class="prev" onclick="rotateSlides(-1)">&#10094;</a>
-            <a class="next" onclick="rotateSlides(1)">&#10095;</a>
-        </div>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </div>
-    <div class="utility-bar">
-        <input type="text" id="filter" placeholder="Filter Text">
-    </div>
-    <div class="form_wrapper">
+      <div class="form_wrapper">
         <div class="form_container">
           <div class="title_container">
-            <h2>Responsive Registration Form</h2>
+            <h2>Amasoon Account Registration</h2>
           </div>
           <div class="row clearfix">
             <div class="">
-              <form>
+              <form action="login.html">
                 <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
                   <input type="email" name="email" placeholder="Email" required />
                 </div>
@@ -136,8 +113,10 @@
                     <div class="input_field select_option">
                       <select>
                         <option>Select a country</option>
-                        <option>Option 1</option>
-                        <option>Option 2</option>
+                        <option>Japan</option>
+                        <option>South Korea</option>
+                        <option>Thailand</option>
+                        <option>Singapore</option>
                       </select>
                       <div class="select_arrow"></div>
                     </div>
@@ -149,7 +128,7 @@
                       <input type="checkbox" id="cb2">
                       <label for="cb2">I want to receive the newsletter</label>
                   </div>
-                <input class="button" type="submit" value="Register" />
+                <input class="button registerBtn" type="submit" value="Register" />
               </form>
             </div>
           </div>
