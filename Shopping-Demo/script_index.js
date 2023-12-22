@@ -8,7 +8,7 @@ let productArray = [
     {
         "id": "0",
         "name": "Cat Food",
-        "price": "40",
+        "price": "40.00",
         "img": "cat-food.png",
         "desc": "Best for 0-2 years old cat. Tuna flavour",
         "url": "prod/product_cat-food.html"
@@ -16,72 +16,82 @@ let productArray = [
     {
         "id": "1",
         "name": "Dog Food",
-        "price": "35",
+        "price": "35.00",
         "img": "dog-food.webp",
-        "url": "prod/prod_dog_food.html"
+		"desc": "Nutritious and delicious dog food for every stage of life.",
+		"url": "./prod/product_dog-food.html"
     },
     {
         "id": "2",
         "name": "Candy",
-        "price": "20",
+        "price": "20.00",
         "img": "candy.png",
-        "desc": "Description Placeholder"
+		"desc": "Sweet treats for every occasion.",
+		"url": "./prod/product_candy.html"
     },
     {
         "id": "3",
         "name": "Children Book",
-        "price": "10",
+        "price": "10.00",
         "img": "children-book.png",
-        "desc": "Description Placeholder"
+		"desc": "A magical adventure for young readers.",
+		"url": "./prod/product_children-book.html"
     },
     {
         "id": "4",
         "name": "Potato Chips",
-        "price": "5",
+        "price": "5.00",
         "img": "potato-chips.svg",
-        "desc": "Description Placeholder"
+		"desc": "Crunchy and flavorful potato chips for snacking.",
+		"url": "./prod/product_potato-chips.html"
     },
     {
         "id": "5",
         "name": "Football",
-        "price": "55.2",
+        "price": "55.20",
         "img": "football.png",
-        "desc": "Description Placeholder"
+		"desc": "A durable and high-quality football for playing and training.",
+		"url": "./prod/product_football.html"
     },
     {
         "id": "6",
         "name": "Basketball",
-        "price": "45.2",
+        "price": "45.20",
         "img": "basketball.png",
-        "desc": "Description Placeholder"
+		"desc": "A professional and reliable basketball for competitive and recreational games.",
+		"url": "./prod/product_basketball.html"
     },
     {
         "id": "7",
         "name": "Phone Case",
-        "price": "500",
+        "price": "500.00",
         "img": "phone-case.webp",
-        "desc": "Description Placeholder"
+		"desc": "A stylish and protective phone case for your smartphone.",
+		"url": "./prod/product_phone-case.html"
     },
     {
         "id": "8",
         "name": "Apple",
-        "price": "10",
+        "price": "10.00",
         "img": "apple.svg",
-        "desc": "Description Placeholder"
+		"desc": "A fresh and juicy apple for a healthy snack.",
+		"url": "./prod/product_apple.html"
     },
     {
         "id": "9",
         "name": "Math Book",
-        "price": "8",
+        "price": "8.00",
         "img": "math-book.svg",
-        "desc": "Description Placeholder"
+		"desc": "A comprehensive and easy-to-follow math book for students and teachers.",
+		"url": "./prod/product_math-book.html"
     },
     {
         "id": "10",
-        "name": "Eggs",
-        "price": "20",
+        "name": "Egg",
+        "price": "20.00",
         "img": "egg.png",
-        "desc": "Description Placeholder"
+		"desc": "Fresh and nutritious eggs for cooking and baking.",
+		"url": "./prod/product_egg.html"
     }
 ]
 

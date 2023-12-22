@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="analysis_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <title>Products Sale Analysis Tool</title>
+</head>
+<body>
+    <header>
+        <h1>Linear Regression of Sales VS Scatter plot of Revenue versus Sales</h1>
+    </header>
+    <main>
+        <div id="intro">
+            <div id="intro-guide">
+                <h2>User Guide</h2>
+                <ul>
+                    <li>The tool only supports .xlsx format file.</li>
+                    <li>
+                        The standard format of the Excel file consists of 4 columns
+                        <ol>
+                            <li>product</li>
+                            <li>sales</li>
+                            <li>revenue</li>
+                            <li>expenses</li>
+                        </ol>
+                    </li>
+                    <li>Please download the template Excel file <a href="sample.xlsx" download="sample.xlsx">here</a></li>
+                </ul>
+            </div>
+            <div id="intro-function">
+                <h2>Tool Function</h2>
+                <ul>
+                    <li>Generate Time Series : Linear Regression of Sales VS Scatter plot of Revenue versus Sales</li>
+                </ul>
+            </div>
+        </div>
+
+        <form id="upload-section">
+            <h2>Upload Excel File</h2>
+            <input type="file" id="file-input" accept=".xlsx" required>
+            <button id="analyze-button">Analyze</button>
+        </form>
+        <hr/>
+        <section id="analysis-section" hidden >
+            <h2 style="display: none;" id="analysis-title" class="title">Products Analysis</h2>
+            <h3 style="display: none;" id="line-charts-title" class="title">Line Chart of Sales, Revenue & Expenses</h3>
+            <div style="display: none;" id="charts" classs="chart"></div>
+            <hr/>
+            <h3 id="line-regress-title" class="title">Regression Analysis of Time Series</h3>
+            <h4>Time Series Linear Regression of Sales</h4>
+            <div id="regress-chart-sales" class="chart"></div>
+            <div id="regress-result-sales"></div>
+            <h4 style="display: none;" >Time Series Linear Regression of Revenue</h4>
+            <div style="display: none;" id="regress-chart-revenue" classs="chart"></div>
+            <div style="display: none;" id="regress-result-revenue"></div>
+            <h4 style="display: none;">Time Series Linear Regression of Expenses</h4>
+            <div style="display: none;" id="regress-chart-expenses" classs="chart"></div>
+            <div style="display: none;" id="regress-result-expenses"></div>
+            <hr/>
+            <h3 style="display: none;" id="bar-charts-title" class="title">Bar Chart of Sales, Revenue & Expenses</h3>
+            <div style="display: none;" id="bar_charts"></div>
+            <h3 id="scatter-charts-title" class="title">Scatter plot of Sales, Revenue & Expenses</h3>
+            <h4> Scatter plot of Revenue versus Sales</h4>
+            <div id="scatter-rvs"></div>
+            <div id="correlation-rvs"></div>
+            <h4 style="display: none;"> Scatter plot of Revenue versus Expenses</h4>
+            <div style="display: none;" id="scatter-rve"></div>
+            <div style="display: none;" id="correlation-rve"></div>
+            <h4 style="display: none;"> Scatter plot of Expenses versus Sales</h4>
+            <div style="display: none;" id="scatter-evs"></div>
+            <div style="display: none;" id="correlation-evs"></div>
+            <h3 style="display: none;" >Raw Data</h3>
+            <div style="display: none;" id="testing"></div>
+        </section>
+    </main>
+    <script src="analysis_script.js"></script>
+</body>
+</html>

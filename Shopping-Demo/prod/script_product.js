@@ -259,10 +259,10 @@ function addToCart() {
     let productTitle = document.querySelector(".product-details-wrapper .product-title").textContent;
     let productThumb = thumbImagesDivs[0].querySelector("img").getAttribute("src");
     let productPrice = parseFloat(document.querySelector(".product-details-wrapper .current-price").textContent.replace("$", ""));
-
+    
     // Check if product already exists in the cart
     let existingProduct = Array.from(cartList.children).find(cartItem => cartItem.querySelector('.item-title').textContent === productTitle);
-
+    
     if (existingProduct) {
       // Update quantity and total price of existing product
       let itemCountElement = existingProduct.querySelector('.item-count');
@@ -270,18 +270,18 @@ function addToCart() {
       let currentQuantity = parseInt(itemCountElement.textContent.replace('x ', ''));
       let newQuantity = currentQuantity + getProductQuantity;
       let newTotalPrice = "$" + (newQuantity * productPrice).toFixed(2);
-
+      
       itemCountElement.textContent = 'x ' + newQuantity;
       totalPriceElement.textContent = newTotalPrice;
     } else {
       // Add new product to the cart
       let totalPrice = "$" + (getProductQuantity * productPrice).toFixed(2);
-
+      
       if (cartList.childElementCount == 0) {
         checkOutBtn.style.display = "block";
         cartList.innerHTML = "";
       }
-
+      
       cartList.innerHTML += `
       <div class="cart-item">
         <div class="item-image">

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amasoon | Complaint</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script_index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="contact_style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="flex flex-ai-c flex-jc-sb">
+                <div class="logo hide-for-mobile">
+                    <img src="img/logo.webp" alt="Logo" style="max-height: 5vh; border-radius: 10px;" />
+                </div>
+                <div class="navgations flex">
+                    <div class="toggle-menu hide-for-desktop">
+                        <img src="img/icon-menu.svg" alt="Burger Menu" />
+                    </div>
+
+                    <div class="main-navgation hide-for-mobile">
+                        <a href="main.html">Main</a>
+                        <a href="about.html">About</a>
+                        <a href="contactus.html">Contact</a>
+                        <a href="site_map.html">Site Map</a>
+                    </div>
+
+                    <div class="mobile-navgation hide-for-desktop">
+                        <div class="close-menu">
+                            <img src="./images/icon-close.svg" alt="Close Icon" />
+                        </div>
+                        <a href="main.html">Main</a>
+                        <a href="about.html">About</a>
+                        <a href="contactus.html">Contact</a>
+                        <a href="site_map.html">Site Map</a>
+                    </div>
+                </div>
+
+                <div class="left-nav">
+                    <div class="controls flex">
+                        <div class="cart">
+                            <div class="cart-icon">
+                                <span class="in-cart"></span>
+                                <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Cart Icon</title>
+                                    <path
+                                        d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                                        fill="#69707D" fill-rule="nonzero" />
+                                </svg>
+                            </div>
+                            <div class="cart-list-wrapper">
+                                <h3 class="cart-heading">Cart</h3>
+                                <div class="cart-content">
+                                    <div class="cart-list"></div>
+                                    <button type="button" aria-label="Check out" class="button checkout-btn">
+                                        Checkout
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actions flex">
+                        <div class="action-btn">
+                            <a href="login.html">Login</a>
+                            <a href="registration.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="promotion-banner hide-for-mobile">
+        <div class="slideshow-container">
+            <div class="slides fade">
+                <img src="img/banner1.png">
+            </div>
+            <div class="slides fade">
+                <img src="img/banner2.png">
+            </div>
+            <div class="slides fade">
+                <img src="img/banner3.png">
+            </div>
+            <a class="prev" onclick="rotateSlides(-1)">&#10094;</a>
+            <a class="next" onclick="rotateSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+    <div class="utility-bar">
+        <input type="text" id="filter" placeholder="Filter Text">
+    </div>
+    <nav>
+
+		<ul>
+			<li><a href="contactus.html"> General Inquiry Form</a></li>
+			<li><a href="comment.html"> Comment Form</a></li>
+			<li><a href="complaint.html"> Complaint Form</a></li>
+		</ul>
+
+	</nav>
+	<div class="container">
+		<h1> Complaint Form</h1>
+		<p> We deeply apologise that you've come to this section of the page obviously because we didn't meet your expectations<br>Please let us know what we did wrong, so we can further improve ourselves and our quality of services</p>
+	</div>
+	<div class="contact-box">
+		<div class="contact-left">
+			<h3>Send your complaint</h3>
+			<form>
+
+				<div class="input-row">
+					<div class="input-group">
+						<label>Name</label>
+						<input type="text" placeholder="John">
+
+					</div>
+					<div class="input-group">
+						<label>Phone</label>
+						<input type="text" placeholder="+852 0123 4567">
+
+					</div>
+
+				</div>
+				<div class="input-row">
+					<div class="input-group">
+						<label>Email</label>
+						<input type="email" placeholder="contactus@example.com">
+
+					</div>
+					<div class="input-group">
+						<label>Address</label>
+						<input type="text" placeholder="See right column for example">
+
+					</div>
+				</div>
+				<label>Message</label>
+				<textarea rows="5" placeholder="Your Message"></textarea>
+				
+
+				<button type="submit">SEND</button>
+
+
+			</form>
+		
+		
+		</div>
+		<div class="contact-right">
+			<h3>Reach Us</h3>
+			<table>
+				<tr>
+					<td>Email</td>
+					<td>contactus@example.com</td>
+				</tr>
+				
+				<tr>
+					<td>Phone</td>
+					<td>+852 0123 4567</td>
+				</tr>
+			
+				<tr>
+					<td>Address</td>
+					<td>#012, Ground Floor, 7th cross<br>
+					Some layout, Some Road, City<br>
+					Country, 414024
+					</td>
+				</tr>
+			
+			</table>
+		
+		
+		</div>
+	</div>
+</body>
+</html>

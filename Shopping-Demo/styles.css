@@ -493,7 +493,7 @@ header {
 
 /* Utility bar */
 .utility-bar {
-    position: sticky;
+    /*position: sticky; */
     top: 150px;
     z-index: 50;
     height: 5vh;
