@@ -27,6 +27,7 @@
     }
 
     .main {
+      top: 150px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -96,10 +97,6 @@
       border-radius: 50%;
     }
 
-    .container {
-      padding: 16px;
-    }
-
     span.psw {
       float: right;
       padding-top: 16px;
@@ -111,7 +108,7 @@
       /* Hidden by default */
       position: fixed;
       /* Stay in place */
-      z-index: 1;
+      z-index: 10;
       /* Sit on top */
       left: 0;
       top: 30px;
@@ -215,7 +212,7 @@
 
           <div class="mobile-navgation hide-for-desktop">
             <div class="close-menu">
-              <img src="./images/icon-close.svg" alt="Close Icon" />
+              <img src="img/icon-close.svg" alt="Close Icon" />
             </div>
             <a href="main.html">Main</a>
             <a href="about.html">About</a>
@@ -259,11 +256,8 @@
   </header>
   <main class="main">
     <h2>Login</h2>
-    <button class="button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Staff
-      Login</button>
-
+    <button class="button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Staff Login</button>
     <div id="id01" class="modal">
-
       <form class="modal-content animate" action="internal_analysis.html" method="post">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id01').style.display='none'" class="close"
@@ -291,11 +285,9 @@
         </div>
       </form>
     </div>
-    <button class="button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Customer
-      Login</button>
+    <button class="button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Customer Login</button>
 
     <div id="id02" class="modal">
-
       <form class="modal-content animate" action="main.html" method="post">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id02').style.display='none'" class="close"
