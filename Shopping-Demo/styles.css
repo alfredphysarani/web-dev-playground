@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-
 @media (max-width: 63.9375em) {
     .hide-for-mobile {
         display: none !important;
